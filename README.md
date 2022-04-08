@@ -96,7 +96,7 @@ Note that the arguments from (included) and end (excluded) this time denote the 
 
 You can now run the HorizontalBoxBlur program with
 
-```scala
+```sh
 > runMain scalashop.HorizontalBoxBlurRunner
 ```
 If you implemented the two blur versions correctly, you should observe that the horizontal stripping is slightly faster. This is because the pixel traversal order visits the pixels which are closer together in memory (remember the mapping between the pixel coordinates and the memory addresses). As a result, each core can reuse some of the pixels that it fetched from the memory during the previous invocation of boxBlurKernel. The processor cores spend less time fetching pixels from memory, and lower the pressure on the memory bus.
@@ -104,7 +104,7 @@ If you implemented the two blur versions correctly, you should observe that the 
 ## ScalaShop
 
 Now we have everything we need to start ScalaShop:
-```scala
+```sh
 > runMain scalashop.ScalaShop
 ```
 
